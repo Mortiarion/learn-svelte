@@ -1,3 +1,9 @@
-<h1>BLOG post one</h1>
+<script>
+    export let data;
+</script>
 
-<p>This is the <strong>BLOG post</strong> page</p>
+<h1>BLOG post {data.post.slug}</h1>
+<p>This is the <strong>BLOG</strong> page {data.post.slug}</p>
+
+<h2>{data.post.title}</h2>
+<div>{@html data.post.content}</div>
