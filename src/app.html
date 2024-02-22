@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <link rel="icon" href="%sveltekit.assets%/favicon.png" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        %sveltekit.head%
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="%sveltekit.assets%/favicon.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="color-scheme" content="dark light" />
+		%sveltekit.head%
 
-				<style>
+		<style>
 			body {
 				--bg-1: hsl(0, 0%, 100%);
 				--bg-2: hsl(206, 20%, 90%);
@@ -253,15 +254,15 @@
 				--link-active: hsl(206, 96%, 64%);
 			}
 		</style>
-    </head>
-    <body data-sveltekit-preload-data="hover">
-        <div style="display: contents">%sveltekit.body%</div>
+	</head>
+	<body>
+		<div style="display: contents">%sveltekit.body%</div>
 
-        <script>
-            const theme = new URL(window.location).searchParams.get("theme");
+		<script>
+			const theme = new URL(window.location).searchParams.get('theme');
 
-            document.body.classList.remove("light", "dark");
-            document.body.classList.add(theme || "light");
-        </script>
-    </body>
+			document.body.classList.remove('light', 'dark');
+			document.body.classList.add(theme || 'light');
+		</script>
+	</body>
 </html>
